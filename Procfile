@@ -1,0 +1,1 @@
+web: java -jar target/speech-nlp-api-heroku.jar
