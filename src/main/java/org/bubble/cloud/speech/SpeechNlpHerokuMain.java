@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import bubble.cloud.speech.nlpapi.SpeechNlpApi;
-import bubble.cloud.speech.nlpapi.SpeechNlpApiImpl;
 import fi.iki.elonen.NanoHTTPD;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.bubblecloud.speech.nlpapi.NanoHttpdJsonRpcServer;
+import org.bubblecloud.speech.nlpapi.NanoHttpdJsonRpcServerResponse;
+import org.bubblecloud.speech.nlpapi.SpeechNlpApi;
+import org.bubblecloud.speech.nlpapi.SpeechNlpApiImpl;
 
 /**
  * Speech NPL JSON RPC HTTP server.
