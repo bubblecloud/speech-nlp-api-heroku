@@ -14,7 +14,7 @@ import org.apache.log4j.xml.DOMConfigurator;
  *
  * @author Tommi S.E. Laukkanen
  */
-public class SpeechNlpHttpServerMain extends NanoHTTPD {
+public class SpeechNlpHerokuMain extends NanoHTTPD {
     /**
      * The logger.
      */
@@ -27,13 +27,13 @@ public class SpeechNlpHttpServerMain extends NanoHTTPD {
     public static void main(String[] args) {
         try {
             DOMConfigurator.configure("log4j.xml");
-            new SpeechNlpHttpServerMain();
+            new SpeechNlpHerokuMain();
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "Error starting Speech NLP JSON RPC HTTP server.", e);
         }
     }
 
-    public SpeechNlpHttpServerMain() throws IOException {
+    public SpeechNlpHerokuMain() throws IOException {
         super(Integer.valueOf(System.getenv("PORT")));
         final SpeechNlpApi api = new SpeechNlpApiImpl();
         jsonRpcServer = new NanoHttpdJsonRpcServer(api, SpeechNlpApi.class);

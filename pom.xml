@@ -49,7 +49,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.bubblecloud.ilves.IlvesMain</mainClass>
+                            <mainClass>org.bubble.cloud.speech.SpeechNlpHerokuMain</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
